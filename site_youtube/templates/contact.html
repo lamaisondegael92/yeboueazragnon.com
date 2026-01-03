@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contact & Support – Yeboue Azragnon</title>
+<link rel="icon" type="image/png" href="/static/images/logo.png">
+
+
+<style>
+:root{
+    --yt-red:#ff0000;
+    --dark:#0f0f0f;
+    --gray:#1c1c1c;
+    --light:#f1f1f1;
+}
+
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:'Segoe UI',Arial,sans-serif;
+    background:linear-gradient(180deg,#0b0b0b,#000);
+    color:var(--light);
+}
+
+/* HEADER */
+header{
+    background:#0f0f0f;
+    padding:22px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid var(--yt-red);
+}
+
+.logo{
+    color:var(--yt-red);
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav a{
+    color:#eee;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav a:hover{color:var(--yt-red);}
+
+/* TITRE */
+.page-title{
+    text-align:center;
+    padding:90px 20px 40px;
+}
+
+.page-title h1{
+    font-size:42px;
+}
+
+.page-title span{color:var(--yt-red);}
+
+.page-title p{
+    max-width:900px;
+    margin:auto;
+    color:#ccc;
+    line-height:1.7;
+}
+
+/* CONTENU */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px 80px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+/* FORM */
+.form-box{
+    background:linear-gradient(180deg,#1a1a1a,#0f0f0f);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 0 40px rgba(0,0,0,.6);
+}
+
+.form-box h2{
+    color:var(--yt-red);
+    margin-bottom:10px;
+}
+
+.form-box p{
+    color:#bbb;
+    margin-bottom:25px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    background:#111;
+    color:#fff;
+}
+
+textarea{resize:none;height:140px;}
+
+button{
+    width:100%;
+    padding:16px;
+    background:var(--yt-red);
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{opacity:.9;}
+
+/* INFO */
+.info-box{
+    background:linear-gradient(180deg,#141414,#0a0a0a);
+    padding:40px;
+    border-radius:25px;
+    border:1px solid #222;
+}
+
+.info-box h3{
+    color:var(--yt-red);
+    margin-bottom:10px;
+}
+
+.info-box p{
+    color:#ccc;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.rules{
+    background:rgba(255,0,0,.08);
+    padding:25px;
+    border-radius:18px;
+    border:1px solid var(--yt-red);
+}
+
+.rules ul{
+    padding-left:18px;
+}
+
+.rules li{
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#080808;
+    text-align:center;
+    padding:30px;
+    color:#777;
+    border-top:1px solid #222;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .container{grid-template-columns:1fr;}
+}
+</style>
+
+<script>
+/* 🔐 PROTECTION ABONNÉ */
+if (!localStorage.getItem("abonneYT")) {
+    window.location.href = "verification.html";
+}
+
+/* 📩 ENVOI FORMULAIRE (EMAIL RÉEL EN ARRIÈRE-PLAN) */
+function envoyerMessage(e){
+    e.preventDefault();
+    alert("Message envoyé avec succès.\nRéponse sous réserve des conditions.");
+}
+</script>
+
+<script>
+if (localStorage.getItem("abonneYT") !== "true") {
+    window.location.href = "/";
+}
+</script>
+
+
+</head>
+<body>
+
+<header>
+    <div class="logo">▶ Yeboue Azragnon</div>
+    <nav>
+        <a href="/index">Accueil</a>
+        <a href="/produits">Produits</a>
+        <a href="/formations">Formations</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<div class="page-title">
+    <h1>📩 Contact & <span>Support</span></h1>
+    <p>
+        Cette page est réservée aux abonnés de la chaîne YouTube.
+        Merci de contacter uniquement pour des demandes sérieuses.
+    </p>
+</div>
+
+<div class="container">
+
+    <!-- FORMULAIRE -->
+    <div class="form-box">
+        <h2>Envoyer un message</h2>
+        <p>
+            Pour toute question liée aux bots, téléchargements ou collaborations.
+        </p>
+
+        <form onsubmit="envoyerMessage(event)" action="mailto:lamaisondegael92@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="Nom" placeholder="Nom ou pseudo" required>
+            <input type="email" name="Email" placeholder="Adresse e-mail" required>
+
+            <select name="Objet" required>
+                <option value="">Objet du message</option>
+                <option>Support technique</option>
+                <option>Question produit</option>
+                <option>Formation</option>
+                <option>Collaboration professionnelle</option>
+            </select>
+
+            <textarea name="Message" placeholder="Votre message..." required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+    </div>
+
+    <!-- INFO -->
+    <div class="info-box">
+        <h3>Informations importantes</h3>
+        <p>
+            📧 Email de contact affiché : <strong>Leon@gmail.com</strong><br>
+            (L’email réel n’est pas visible publiquement)
+        </p>
+
+        <div class="rules">
+            <h3>Conditions de contact</h3>
+            <ul>
+                <li>Pas d’assistance personnalisée gratuite</li>
+                <li>Pas de support hors produits proposés</li>
+                <li>Temps de réponse variable selon la demande</li>
+                <li>Messages irrespectueux ignorés</li>
+                <li>Contact réservé aux abonnés YouTube</li>
+            </ul>
+        </div>
+
+        <p>
+            👉 Assure-toi d’être abonné à la chaîne
+            <strong>Yeboue Azragnon</strong> pour continuer à accéder au site.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 – Yeboue Azragnon  
+    <br>Contact réservé aux abonnés de la chaîne YouTube
+</footer>
+
+</body>
+</html>

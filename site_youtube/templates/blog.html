@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Blog – Yeboue Azragnon</title>
+<link rel="icon" type="image/png" href="/static/images/logo.png">
+
+<style>
+:root {
+    --yt-red:#ff0000;
+    --dark:#0f0f0f;
+    --gray:#1c1c1c;
+    --light:#f1f1f1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin:0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg,#0b0b0b,#000);
+    color: var(--light);
+}
+
+/* HEADER */
+header {
+    background:#0f0f0f;
+    padding:22px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid var(--yt-red);
+}
+
+.logo {
+    color:var(--yt-red);
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav a {
+    color:#eee;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav a:hover { color:var(--yt-red); }
+
+/* TITRE */
+.page-title {
+    text-align:center;
+    padding:80px 20px 30px;
+}
+
+.page-title h1 {
+    font-size:44px;
+}
+
+.page-title span { color:var(--yt-red); }
+
+.page-title p {
+    max-width:900px;
+    margin:auto;
+    color:#ccc;
+    line-height:1.7;
+}
+
+/* BLOG */
+.blog {
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px 80px;
+}
+
+.article {
+    background: linear-gradient(180deg,#1a1a1a,#0f0f0f);
+    border-radius:25px;
+    overflow:hidden;
+    margin-bottom:60px;
+    box-shadow:0 0 40px rgba(0,0,0,.6);
+}
+
+.article img {
+    width:100%;
+    height:380px;
+    object-fit:cover;
+}
+
+.article-content {
+    padding:40px;
+}
+
+.article h2 {
+    color:var(--yt-red);
+    font-size:32px;
+}
+
+.meta {
+    color:#aaa;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.article p {
+    line-height:1.8;
+    color:#ddd;
+    margin-bottom:18px;
+}
+
+/* FOOTER */
+footer {
+    background:#080808;
+    text-align:center;
+    padding:30px;
+    color:#777;
+    border-top:1px solid #222;
+}
+</style>
+
+<script>
+/* 🔐 PROTECTION ABONNÉ */
+if (!localStorage.getItem("abonneYT")) {
+    window.location.href = "verification.html";
+}
+</script>
+<script>
+if (localStorage.getItem("abonneYT") !== "true") {
+    window.location.href = "/";
+}
+</script>
+
+
+</head>
+<body>
+
+<header>
+    <div class="logo">▶ Yeboue Azragnon</div>
+    <nav>
+        <a href="/index">Accueil</a>
+        <a href="/produits">Produits</a>
+        <a href="/formations">Formations</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<div class="page-title">
+    <h1>📰 Blog <span>Technologie & Automatisation</span></h1>
+    <p>
+        Articles complets, analyses approfondies et conseils pratiques
+        autour de l’automatisation, des bots et de la productivité numérique.
+    </p>
+</div>
+
+<div class="blog">
+
+<!-- ARTICLE 1 -->
+<div class="article">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Automatisation">
+    <div class="article-content">
+        <h2>Pourquoi l’automatisation est devenue indispensable en 2026</h2>
+        <div class="meta">Publié par Yeboue Azragnon • Technologie</div>
+
+        <p><strong>Introduction</strong><br>
+        L’automatisation n’est plus un luxe réservé aux grandes entreprises.
+        Aujourd’hui, même les particuliers peuvent automatiser leurs tâches
+        quotidiennes grâce à des outils simples et accessibles.</p>
+
+        <p><strong>Développement</strong><br>
+        Automatiser permet de gagner du temps, de réduire les erreurs humaines
+        et d’augmenter considérablement la productivité. Sur Windows, des scripts
+        simples comme les fichiers VBS peuvent ranger, nettoyer ou organiser un
+        système sans intervention humaine.</p>
+
+        <p>Les bots deviennent ainsi de véritables assistants numériques capables
+        d’exécuter des tâches répétitives pendant que l’utilisateur se concentre
+        sur des activités à forte valeur ajoutée.</p>
+
+        <p><strong>Conclusion</strong><br>
+        L’automatisation est un levier puissant pour toute personne souhaitant
+        travailler intelligemment. Comprendre ces outils aujourd’hui, c’est
+        prendre une longueur d’avance pour demain.</p>
+    </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article">
+    <img src="https://images.unsplash.com/photo-1581091870627-3c1b1b1b1b1b" alt="Bots Windows">
+    <div class="article-content">
+        <h2>Les bots Windows : simples outils ou véritables solutions ?</h2>
+        <div class="meta">Publié par Yeboue Azragnon • Bots & Scripts</div>
+
+        <p><strong>Introduction</strong><br>
+        Beaucoup sous-estiment les bots Windows, les considérant comme
+        de simples scripts sans grande utilité. Pourtant, leur potentiel
+        est bien plus vaste.</p>
+
+        <p><strong>Développement</strong><br>
+        Un bot bien conçu peut organiser un ordinateur, sauvegarder des fichiers,
+        nettoyer des dossiers ou même lancer automatiquement des logiciels.
+        Contrairement aux idées reçues, ces outils sont légers, rapides
+        et extrêmement efficaces.</p>
+
+        <p>Ils constituent une excellente porte d’entrée pour apprendre
+        la logique de programmation et comprendre le fonctionnement
+        interne d’un système.</p>
+
+        <p><strong>Conclusion</strong><br>
+        Les bots Windows sont loin d’être obsolètes. Bien utilisés,
+        ils deviennent des solutions puissantes et accessibles à tous.</p>
+    </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article">
+    <img src="https://images.unsplash.com/photo-1526378722484-cc5c510f1b4b" alt="Organisation PC">
+    <div class="article-content">
+        <h2>Comment garder un PC organisé et performant sur le long terme</h2>
+        <div class="meta">Publié par Yeboue Azragnon • Productivité</div>
+
+        <p><strong>Introduction</strong><br>
+        Un ordinateur mal organisé devient rapidement lent et difficile
+        à utiliser. Pourtant, quelques bonnes pratiques suffisent
+        à éviter ce problème.</p>
+
+        <p><strong>Développement</strong><br>
+        Ranger régulièrement ses fichiers, supprimer les éléments inutiles
+        et automatiser certaines tâches permet de conserver un PC fluide.
+        Les bots de rangement sont particulièrement efficaces pour cette mission.</p>
+
+        <p>En automatisant l’organisation, on réduit la charge mentale
+        et on améliore significativement son confort de travail.</p>
+
+        <p><strong>Conclusion</strong><br>
+        Un PC bien organisé est un outil puissant. Investir du temps
+        dans son optimisation est un choix stratégique à long terme.</p>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    © 2026 – Yeboue Azragnon  
+    <br>Blog réservé aux abonnés de la chaîne YouTube
+</footer>
+
+</body>
+</html>

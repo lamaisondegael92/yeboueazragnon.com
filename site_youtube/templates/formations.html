@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Formations – Yeboue Azragnon</title>
+<link rel="icon" type="image/png" href="/static/images/logo.png">
+
+
+<style>
+:root {
+    --yt-red: #ff0000;
+    --yt-dark: #0f0f0f;
+    --yt-gray: #1f1f1f;
+    --yt-light: #f1f1f1;
+    --yt-yellow: #facc15;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #0b0b0b, #000);
+    color: var(--yt-light);
+}
+
+/* HEADER */
+header {
+    background: #0f0f0f;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--yt-red);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--yt-red);
+}
+
+nav a {
+    color: var(--yt-light);
+    margin-left: 22px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover { color: var(--yt-red); }
+
+/* TITRE */
+.page-title {
+    text-align: center;
+    padding: 90px 20px 40px;
+}
+
+.page-title h1 {
+    font-size: 42px;
+}
+
+.page-title span {
+    color: var(--yt-red);
+}
+
+.page-title p {
+    max-width: 800px;
+    margin: auto;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+/* FORMATIONS */
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.card {
+    background: linear-gradient(180deg, #1a1a1a, #0f0f0f);
+    padding: 35px;
+    border-radius: 22px;
+    border: 1px solid #222;
+    box-shadow: 0 0 25px rgba(0,0,0,.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: "BIENTÔT DISPONIBLE";
+    position: absolute;
+    top: 18px;
+    right: -40px;
+    transform: rotate(45deg);
+    background: var(--yt-yellow);
+    color: black;
+    padding: 8px 60px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card h3 {
+    color: var(--yt-red);
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.card ul {
+    padding-left: 18px;
+}
+
+.card ul li {
+    margin: 8px 0;
+    color: #ddd;
+}
+
+/* INFO */
+.info {
+    background: rgba(255,0,0,.1);
+    border: 1px solid var(--yt-red);
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.info h2 {
+    color: var(--yt-red);
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #080808;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #222;
+}
+</style>
+
+<script>
+/* 🔐 PROTECTION ABONNÉ */
+if (!localStorage.getItem("abonneYT")) {
+    window.location.href = "verification.html";
+}
+</script>
+
+<script>
+if (localStorage.getItem("abonneYT") !== "true") {
+    window.location.href = "/";
+}
+</script>
+
+
+</head>
+<body>
+
+<header>
+    <div class="logo">▶ Yeboue Azragnon</div>
+    <nav>
+        <a href="/index">Accueil</a>
+        <a href="/produits">Produits</a>
+        <a href="/formations">Formations</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<div class="page-title">
+    <h1>🎓 Formations <span>Premium</span></h1>
+    <p>
+        Les formations proposées ici iront bien au-delà des vidéos YouTube.
+        Elles seront complètes, structurées et orientées pratique.
+    </p>
+</div>
+
+<section>
+    <div class="cards">
+
+        <div class="card">
+            <h3>Automatisation Windows</h3>
+            <p>
+                Apprends à créer des scripts et des bots capables
+                d’automatiser des tâches répétitives sur Windows.
+            </p>
+            <ul>
+                <li>VBS / scripts</li>
+                <li>Automatisation réelle</li>
+                <li>Cas pratiques</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Création de Bots & Outils</h3>
+            <p>
+                De l’idée à l’outil final :
+                conception, développement, test et amélioration.
+            </p>
+            <ul>
+                <li>Logique de bots</li>
+                <li>Organisation du code</li>
+                <li>Optimisation</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Business & Monétisation</h3>
+            <p>
+                Comment transformer tes compétences techniques
+                en projets concrets et rentables.
+            </p>
+            <ul>
+                <li>Produits digitaux</li>
+                <li>Vente en ligne</li>
+                <li>Stratégies long terme</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="info">
+        <h2>🚧 Formations non disponibles pour le moment</h2>
+        <p>
+            Les formations sont actuellement en cours de préparation.
+            Elles seront accessibles très prochainement aux abonnés.
+            Reste connecté à la chaîne YouTube pour être informé en premier.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 – Yeboue Azragnon  
+    <br>Formations réservées aux abonnés de la chaîne YouTube
+</footer>
+
+</body>
+</html>

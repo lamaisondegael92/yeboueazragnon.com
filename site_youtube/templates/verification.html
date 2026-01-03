@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Accès réservé – Yeboue Azragnon</title>
+<link rel="icon" type="image/png" href="/static/images/logo.png">
+
+
+<style>
+:root {
+    --yt-red: #ff0000;
+    --yt-dark: #0f0f0f;
+    --yt-gray: #1f1f1f;
+    --yt-light: #f1f1f1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: radial-gradient(circle at top, #1f1f1f, #000);
+    color: var(--yt-light);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER */
+.wrapper {
+    background: linear-gradient(180deg, #111, #0a0a0a);
+    border-radius: 25px;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 520px;
+    text-align: center;
+    box-shadow:
+        0 0 40px rgba(255, 0, 0, 0.25),
+        0 0 120px rgba(255, 0, 0, 0.15);
+    animation: fadeIn 1s ease;
+}
+
+/* LOGO */
+.logo {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: var(--yt-red);
+    text-shadow: 0 0 20px rgba(255,0,0,0.6);
+}
+
+/* TEXTES */
+h1 {
+    margin: 10px 0 5px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.channel {
+    color: var(--yt-red);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #cfcfcf;
+    margin: 15px 0 35px;
+    font-size: 16px;
+}
+
+/* BOUTONS */
+button {
+    width: 100%;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-subscribe {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    color: white;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+}
+
+.btn-subscribe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255,0,0,0.9);
+}
+
+.btn-confirm {
+    margin-top: 15px;
+    background: #1f1f1f;
+    color: #22c55e;
+    border: 2px solid #22c55e;
+}
+
+.btn-confirm:hover {
+    background: #22c55e;
+    color: black;
+}
+
+/* FOOTER */
+.note {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+<script>
+const YOUTUBE_CHANNEL =
+"https://www.youtube.com/@YeboueAzragnon?sub_confirmation=1";
+
+function subscribe() {
+    window.open(YOUTUBE_CHANNEL, "_blank");
+}
+</script>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="logo">▶</div>
+
+    <h1>Accès réservé</h1>
+    <div class="channel">Yeboue Azragnon</div>
+
+    <p>
+        Ce site est exclusivement réservé aux abonnés de la chaîne YouTube.
+        Abonne-toi pour débloquer tout le contenu premium.
+    </p>
+
+    <button class="btn-subscribe" onclick="subscribe()">
+        🔔 S’abonner à la chaîne
+    </button>
+
+    <form action="/valider_abonne" method="post">
+        <button class="btn-confirm" type="submit">
+            ✅ Je suis déjà abonné
+        </button>
+    </form>
+
+    <div class="note">
+        🔒 Accès sécurisé par validation serveur
+    </div>
+
+</div>
+
+</body>
+</html>

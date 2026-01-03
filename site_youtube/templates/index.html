@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Espace Abonnés – Yeboue Azragnon</title>
+<link rel="icon" type="image/png" href="/static/images/logo.png">
+
+
+<style>
+:root {
+    --yt-red: #ff0000;
+    --yt-dark: #0f0f0f;
+    --yt-gray: #1f1f1f;
+    --yt-light: #f1f1f1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #0b0b0b, #000);
+    color: var(--yt-light);
+}
+
+/* HEADER */
+header {
+    background: #0f0f0f;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--yt-red);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--yt-red);
+    text-shadow: 0 0 12px rgba(255,0,0,.6);
+}
+
+nav a {
+    color: var(--yt-light);
+    margin-left: 22px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover { color: var(--yt-red); }
+
+/* HERO */
+.hero {
+    padding: 90px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+
+.hero span { color: var(--yt-red); }
+
+.hero p {
+    font-size: 18px;
+    color: #cfcfcf;
+    line-height: 1.7;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: var(--yt-red);
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: linear-gradient(180deg, #1a1a1a, #0f0f0f);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    box-shadow: 0 0 25px rgba(0,0,0,.6);
+}
+
+.card h3 {
+    color: var(--yt-red);
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* LISTS */
+ul {
+    padding-left: 18px;
+}
+
+ul li {
+    margin: 8px 0;
+    color: #ddd;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(135deg, #ff0000, #b00000);
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 30px;
+    margin-top: 40px;
+    box-shadow: 0 0 40px rgba(255,0,0,.4);
+}
+
+.cta h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+    background: #080808;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #222;
+}
+</style>
+
+<script>
+/* 🔐 PROTECTION */
+if (!localStorage.getItem("abonneYT")) {
+    window.location.href = "verification.html";
+}
+</script>
+
+<script>
+if (localStorage.getItem("abonneYT") !== "true") {
+    window.location.href = "/";
+}
+</script>
+
+
+</head>
+<body>
+
+<header>
+    <div class="logo">▶ Yeboue Azragnon</div>
+    <nav>
+        <a href="/index">Accueil</a>
+        <a href="/produits">Produits</a>
+        <a href="/formations">Formations</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Bienvenue dans l’espace <span>Abonnés Officiels</span></h1>
+    <p>
+        Cet espace a été conçu pour ceux qui veulent aller plus loin que les vidéos YouTube.
+        Ici, tu accèdes à des ressources concrètes, des outils exclusifs et des formations
+        détaillées que je ne partage nulle part ailleurs.
+    </p>
+</div>
+
+<!-- POURQUOI -->
+<section>
+    <h2 class="section-title">🚀 Pourquoi cet espace existe ?</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🎯 Apprentissage réel</h3>
+            <p>
+                Les vidéos YouTube montrent le concept.
+                Ici, tu obtiens les fichiers, le code, les explications complètes
+                et les bonnes pratiques utilisées par les pros.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🛠️ Outils prêts à l’emploi</h3>
+            <p>
+                Plus besoin de chercher partout.
+                Tous les outils proposés ici sont testés, optimisés
+                et pensés pour être utilisés immédiatement.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💡 Mentalité & stratégie</h3>
+            <p>
+                Au-delà du code, tu apprendras comment penser projet,
+                automatisation, productivité et monétisation.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTENU -->
+<section>
+    <h2 class="section-title">📚 Ce que tu vas trouver ici</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>📦 Produits exclusifs</h3>
+            <ul>
+                <li>Bots Windows (VBS / EXE)</li>
+                <li>Scripts d’automatisation</li>
+                <li>Outils productivité</li>
+                <li>Versions gratuites & PRO</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🎓 Formations complètes</h3>
+            <ul>
+                <li>Création de bots de A à Z</li>
+                <li>Automatisation Windows</li>
+                <li>Business digital</li>
+                <li>Vente de logiciels</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>📰 Articles avancés</h3>
+            <ul>
+                <li>Tutoriels écrits détaillés</li>
+                <li>Erreurs à éviter</li>
+                <li>Stratégies concrètes</li>
+                <li>Études de cas réels</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>🔥 Tu es exactement là où tu dois être</h2>
+    <p>
+        Si tu lis ceci, c’est que tu fais partie des abonnés
+        qui veulent apprendre sérieusement et passer à l’action.
+        Explore le site et exploite chaque ressource.
+    </p>
+</section>
+
+<footer>
+    © 2026 – Yeboue Azragnon  
+    <br>Contenu strictement réservé aux abonnés de la chaîne YouTube
+</footer>
+
+</body>
+</html>

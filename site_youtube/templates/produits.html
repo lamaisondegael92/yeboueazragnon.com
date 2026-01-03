@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Produits – Yeboue Azragnon</title>
+<link rel="icon" type="image/png" href="/static/images/logo.png">
+
+
+<script>
+if (localStorage.getItem("abonneYT") !== "true") {
+    window.location.href = "/";
+}
+</script>
+
+<style>
+:root {
+    --yt-red: #ff0000;
+    --yt-dark: #0f0f0f;
+    --yt-gray: #1f1f1f;
+    --yt-light: #f1f1f1;
+    --yt-green: #22c55e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #0b0b0b, #000);
+    color: var(--yt-light);
+}
+
+/* HEADER */
+header {
+    background: #0f0f0f;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--yt-red);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--yt-red);
+}
+
+nav a {
+    color: var(--yt-light);
+    margin-left: 22px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover { color: var(--yt-red); }
+
+/* TITRES */
+.page-title {
+    text-align: center;
+    padding: 70px 20px 30px;
+}
+
+.page-title h1 {
+    font-size: 40px;
+}
+
+.page-title span {
+    color: var(--yt-red);
+}
+
+.page-title p {
+    max-width: 800px;
+    margin: auto;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: var(--yt-red);
+}
+
+/* PRODUITS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.product {
+    background: linear-gradient(180deg, #1a1a1a, #0f0f0f);
+    padding: 30px;
+    border-radius: 22px;
+    border: 1px solid #222;
+    box-shadow: 0 0 25px rgba(0,0,0,.6);
+}
+
+.product h3 {
+    color: var(--yt-red);
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* BADGES */
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.free {
+    background: rgba(34,197,94,.15);
+    color: var(--yt-green);
+    border: 1px solid var(--yt-green);
+}
+
+.paid {
+    background: rgba(255,0,0,.15);
+    color: var(--yt-red);
+    border: 1px solid var(--yt-red);
+}
+
+/* BOUTONS */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.btn-download {
+    background: var(--yt-green);
+    color: black;
+}
+
+.btn-download:hover {
+    background: #16a34a;
+}
+
+.btn-pay {
+    background: var(--yt-red);
+    color: white;
+}
+
+.btn-pay:hover {
+    background: #cc0000;
+}
+
+/* FOOTER */
+footer {
+    background: #080808;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #222;
+}
+</style>
+
+<script>
+/* 🔐 PROTECTION ABONNÉ */
+if (!localStorage.getItem("abonneYT")) {
+    window.location.href = "verification.html";
+}
+</script>
+
+
+</head>
+<body>
+
+<header>
+    <div class="logo">▶ Yeboue Azragnon</div>
+    <nav>
+        <a href="/index">Accueil</a>
+        <a href="/produits">Produits</a>
+        <a href="/formations">Formations</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<!-- TITRE -->
+<div class="page-title">
+    <h1>📦 Produits <span>Exclusifs</span></h1>
+    <p>
+        Tous les produits présents sur cette page sont développés et testés.
+        Certains sont gratuits, d’autres sont payants.
+        Chaque produit possède sa propre section de téléchargement ou de paiement.
+    </p>
+</div>
+
+<!-- PRODUITS GRATUITS -->
+<section>
+    <h2 class="section-title">🆓 Produits gratuits</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <span class="badge free">GRATUIT</span>
+            <h3>BOT VBS – Ranger ton PC</h3>
+            <p>
+                Ce bot VBS permet de ranger automatiquement ton PC
+                en classant les fichiers, dossiers et éléments du bureau.
+                Idéal pour garder un système propre et organisé sans effort.
+            </p>
+
+            <ul>
+                <li>Classement automatique</li>
+                <li>Gain de temps</li>
+                <li>Facile à utiliser</li>
+                <li>Compatible Windows</li>
+            </ul>
+
+            <!-- LIEN À MODIFIER PLUS TARD -->
+            <a href="/telecharger/bot-vbs-ranger-pc">
+    📥 Télécharger gratuitement
+</a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- PRODUITS PAYANTS -->
+<section>
+    <h2 class="section-title">💰 Produits payants</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <span class="badge paid">PAYANT</span>
+            <h3>Bientôt disponible</h3>
+            <p>
+                Des outils plus avancés, des versions PRO
+                et des solutions complètes arriveront très bientôt.
+            </p>
+
+            <a href="#" class="btn btn-pay">
+                💳 Payer (bientôt)
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 – Yeboue Azragnon  
+    <br>Produits réservés aux abonnés de la chaîne YouTube
+</footer>
+
+</body>
+</html>
